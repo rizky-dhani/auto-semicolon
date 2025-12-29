@@ -1,7 +1,7 @@
 {
-  "name": "auto-semicolon",
-  "displayName": "Auto Semicolon",
-  "description": "Quickly add semicolons at the end of lines with customizable shortcuts",
+  "name": "semify",
+  "displayName": "Semify",
+  "description": "Quickly add semicolons at the end of lines with customizable shortcuts - Perfect for PHP, JavaScript, TypeScript and other semicolon-heavy languages",
   "version": "1.0.0",
   "publisher": "da1shiq",
   "engines": {
@@ -19,57 +19,57 @@
   "contributes": {
     "commands": [
       {
-        "command": "auto-semicolon.addSemicolonCurrentLine",
-        "title": "Auto Semicolon: Add Semicolon to Current Line"
+        "command": "semify.addSemicolonCurrentLine",
+        "title": "Semify: Add Semicolon to Current Line"
       },
       {
-        "command": "auto-semicolon.addSemicolonSelectedLines",
-        "title": "Auto Semicolon: Add Semicolon to Selected Lines"
+        "command": "semify.addSemicolonSelectedLines",
+        "title": "Semify: Add Semicolon to Selected Lines"
       },
       {
-        "command": "auto-semicolon.addSemicolonAndNextLine",
-        "title": "Auto Semicolon: Add Semicolon and Move to Next Line"
+        "command": "semify.addSemicolonAndNextLine",
+        "title": "Semify: Add Semicolon and Move to Next Line"
       },
       {
-        "command": "auto-semicolon.toggleSemicolon",
-        "title": "Auto Semicolon: Toggle Semicolon on Current Line"
+        "command": "semify.toggleSemicolon",
+        "title": "Semify: Toggle Semicolon on Current Line"
       }
     ],
     "keybindings": [
       {
-        "command": "auto-semicolon.addSemicolonCurrentLine",
+        "command": "semify.addSemicolonCurrentLine",
         "key": "ctrl+;",
         "mac": "cmd+;",
         "when": "editorTextFocus"
       },
       {
-        "command": "auto-semicolon.addSemicolonSelectedLines",
+        "command": "semify.addSemicolonSelectedLines",
         "key": "ctrl+shift+;",
         "mac": "cmd+shift+;",
         "when": "editorTextFocus && editorHasSelection"
       },
       {
-        "command": "auto-semicolon.addSemicolonAndNextLine",
+        "command": "semify.addSemicolonAndNextLine",
         "key": "ctrl+alt+;",
         "mac": "cmd+alt+;",
         "when": "editorTextFocus"
       },
       {
-        "command": "auto-semicolon.toggleSemicolon",
+        "command": "semify.toggleSemicolon",
         "key": "ctrl+k ctrl+;",
         "mac": "cmd+k cmd+;",
         "when": "editorTextFocus"
       }
     ],
     "configuration": {
-      "title": "Auto Semicolon",
+      "title": "Semify",
       "properties": {
-        "autoSemicolon.languageSpecific": {
+        "semify.languageSpecific": {
           "type": "boolean",
           "default": true,
           "description": "Only enable for specific languages (PHP, JavaScript, TypeScript, C, C++, Java, etc.)"
         },
-        "autoSemicolon.enabledLanguages": {
+        "semify.enabledLanguages": {
           "type": "array",
           "default": [
             "php",

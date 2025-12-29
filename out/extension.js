@@ -39,7 +39,7 @@ exports.deactivate = deactivate;
 const vscode = __importStar(require("vscode"));
 function activate(context) {
     // Command to add semicolon at end of current line
-    let addSemicolonCurrentLine = vscode.commands.registerCommand('auto-semicolon.addSemicolonCurrentLine', () => {
+    let addSemicolonCurrentLine = vscode.commands.registerCommand('semify.addSemicolonCurrentLine', () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor)
             return;
@@ -58,7 +58,7 @@ function activate(context) {
         });
     });
     // Command to add semicolon to all selected lines
-    let addSemicolonSelectedLines = vscode.commands.registerCommand('auto-semicolon.addSemicolonSelectedLines', () => {
+    let addSemicolonSelectedLines = vscode.commands.registerCommand('semify.addSemicolonSelectedLines', () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor)
             return;
@@ -79,7 +79,7 @@ function activate(context) {
         });
     });
     // Command to add semicolon and move to next line
-    let addSemicolonAndNextLine = vscode.commands.registerCommand('auto-semicolon.addSemicolonAndNextLine', () => {
+    let addSemicolonAndNextLine = vscode.commands.registerCommand('semify.addSemicolonAndNextLine', () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor)
             return;
@@ -101,7 +101,7 @@ function activate(context) {
         });
     });
     // Command to toggle semicolon (add or remove)
-    let toggleSemicolon = vscode.commands.registerCommand('auto-semicolon.toggleSemicolon', () => {
+    let toggleSemicolon = vscode.commands.registerCommand('semify.toggleSemicolon', () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor)
             return;

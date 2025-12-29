@@ -4,7 +4,7 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
     // Command to add semicolon at end of current line
     let addSemicolonCurrentLine = vscode.commands.registerCommand(
-        'auto-semicolon.addSemicolonCurrentLine',
+        'semify.addSemicolonCurrentLine',
         () => {
             const editor = vscode.window.activeTextEditor;
             if (!editor) return;
@@ -29,7 +29,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     // Command to add semicolon to all selected lines
     let addSemicolonSelectedLines = vscode.commands.registerCommand(
-        'auto-semicolon.addSemicolonSelectedLines',
+        'semify.addSemicolonSelectedLines',
         () => {
             const editor = vscode.window.activeTextEditor;
             if (!editor) return;
@@ -57,7 +57,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     // Command to add semicolon and move to next line
     let addSemicolonAndNextLine = vscode.commands.registerCommand(
-        'auto-semicolon.addSemicolonAndNextLine',
+        'semify.addSemicolonAndNextLine',
         () => {
             const editor = vscode.window.activeTextEditor;
             if (!editor) return;
@@ -84,7 +84,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     // Command to toggle semicolon (add or remove)
     let toggleSemicolon = vscode.commands.registerCommand(
-        'auto-semicolon.toggleSemicolon',
+        'semify.toggleSemicolon',
         () => {
             const editor = vscode.window.activeTextEditor;
             if (!editor) return;

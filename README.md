@@ -1,6 +1,6 @@
-# Auto Semicolon Extension
+# Semify Extension
 
-A VS Code/Codium extension by **da1shiq** that helps you quickly add semicolons at the end of lines with customizable keyboard shortcuts. Perfect for PHP, JavaScript, TypeScript, and other semicolon-required languages.
+A VS Code/Codium extension by **da1shiq** that helps you quickly add semicolons at the end of lines with customizable keyboard shortcuts. Perfect for PHP, JavaScript, TypeScript, and other semicolon-heavy languages.
 
 ## Features
 
@@ -26,8 +26,8 @@ A VS Code/Codium extension by **da1shiq** that helps you quickly add semicolons 
 
 1. Create the extension folder structure:
    ```bash
-   mkdir -p auto-semicolon/src
-   cd auto-semicolon
+   mkdir -p semify/src
+   cd semify
    ```
 
 2. Create the files in their correct locations:
@@ -81,12 +81,12 @@ You can customize the keyboard shortcuts in two ways:
 [
   {
     "key": "ctrl+enter",
-    "command": "auto-semicolon.addSemicolonCurrentLine",
+    "command": "semify.addSemicolonCurrentLine",
     "when": "editorTextFocus"
   },
   {
     "key": "alt+s",
-    "command": "auto-semicolon.toggleSemicolon",
+    "command": "semify.toggleSemicolon",
     "when": "editorTextFocus"
   }
 ]
@@ -103,8 +103,8 @@ Access settings via `File > Preferences > Settings` and search for "Auto Semicol
 
 ```json
 {
-  "autoSemicolon.languageSpecific": true,
-  "autoSemicolon.enabledLanguages": [
+  "semify.languageSpecific": true,
+  "semify.enabledLanguages": [
     "php",
     "javascript",
     "typescript",
@@ -166,7 +166,7 @@ vsce package
 ### Project Structure
 
 ```
-auto-semicolon/
+semify/
 ├── src/
 │   └── extension.ts      # Main extension code (MUST be in src/)
 ├── out/                  # Compiled output (generated)
